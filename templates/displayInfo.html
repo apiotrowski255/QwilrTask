@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+   {% for time in data['Time Series (Digital Currency Intraday)'] %}
+      <p>{{ time }}<p>
+      
+      <p> {{ data['Time Series (Digital Currency Intraday)'][time ]}}</p>
+   {% endfor %}
+{% endblock %}

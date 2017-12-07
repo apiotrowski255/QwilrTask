@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block body %}
+   <p>Account Username: {{ data.name }}<p>
+   <p>Account Net funds: {{ data.account_funds}}</p>
+   
+   <p>invested stocks</p>
+   {% for stock in data.stocks %}
+      <p>{{ stock }} : {{ data.stocks[stock]}}<p>
+   {% endfor %}
+
+   <div style="position:relative; left: 45%; margin-top:50%;">
+      <button type="button" class="btn btn-primary btn-lg">buy</button>
+      <button type="button" class="btn btn-primary btn-lg">sell</button>
+   <div>
+{% endblock %}
